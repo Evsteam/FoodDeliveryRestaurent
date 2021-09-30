@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarAddMenuList"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarAddMenuList"
+        android:fillViewport="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_below="@id/toolbarAddMenuList"
+            >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/etxt_bg"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+                android:hint="Dish Name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_14sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layoutCategoryr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/etxt_bg">
+
+
+            <Spinner
+                android:id="@+id/spn_Category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img_drop1"
+                android:background="@null" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:id="@+id/img_drop1"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/down_arrow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_Type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/etxt_bg">
+
+
+            <Spinner
+                android:id="@+id/spn_foodType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img_drop"
+                android:background="@null" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:id="@+id/img_drop"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/down_arrow" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/etxt_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:maxLength="6"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_14sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/etxt_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/et_specialPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+                android:hint="Special Price"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:maxLength="6"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_14sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/etxt_bg"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/et_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+                android:hint="Description"
+                android:gravity="top"
+                android:inputType="textPersonName"
+                android:maxLines="20"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_14sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/restaurantCoverPhoto">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/uploadRestaurantLogo"
+                android:background="@drawable/doted_outline">
+
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_itemImage"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/image"
+                    app:riv_corner_radius="@dimen/_5sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_itemImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/d_din_font"
+                    android:text="Upload Dish Image"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_14sdp" />
+
+            </RelativeLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_Image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:riv_corner_radius="@dimen/_5sdp"/>
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/button_corner_perple"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:layout_below="@id/uploadRestaurantLogo"
+            android:text="Save &amp; Continue"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+Add Menu Item"
+            android:textColor="@color/black"
+            android:id="@+id/tv_addMoreMenu"
+            android:fontFamily="@font/d_din_font"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@id/toGetWelcome"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:textColor="@color/black"
+            android:fontFamily="@font/d_din_font"
+            android:id="@+id/tv_skip"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:layout_below="@id/toGetWelcome"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
+
+
+    <ScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_dash"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@color/white"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back_back"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/foodLogin"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/service"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/serviceLogin"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/foodLogin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/to_get"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/toGetLogin"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:layout_below="@id/serviceLogin"
+
+                    />
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:elevation="1dp"
+                    app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                    app:tabBackground="@drawable/tab_color_selector"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabPaddingEnd="0dp"
+                    app:tabPaddingStart="0dp"
+                    android:layout_alignParentBottom="true"
+                    app:tabSelectedTextColor="@color/yellow"
+                    app:tabTextColor="@color/white" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_dash"
+                android:orientation="vertical">
+
+                <com.evs.foodexp.utils.WrapContentHeightViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

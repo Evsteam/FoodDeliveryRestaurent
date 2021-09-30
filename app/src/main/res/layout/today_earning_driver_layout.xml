@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/totalEarningsLayoutMain"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/etxt_bg_white"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:id="@+id/totalEarningsLayout"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/myEarningsDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:maxLines="1"
+                android:text="290.5$"
+                android:textColor="@android:color/holo_green_dark"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_16sdp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/myEarningsDriverTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font_bold"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:text="My Earnings"
+
+                android:textColor="@android:color/black"
+
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_10sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/etxt_bg_white"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:id="@+id/driverDeliveryLayout"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/restEarnings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:maxLines="1"
+                android:text="50"
+                android:textColor="@color/caldroid_holo_blue_dark"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_16sdp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/callDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font_bold"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:text="Delivery"
+
+                android:textColor="@android:color/black"
+
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_10sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/etxt_bg_white"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/restOrderDeliveredNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:maxLines="1"
+                android:text="60"
+                android:textColor="@color/orange"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_16sdp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/orderDeliveredTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font_bold"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:text="To Get"
+
+                android:textColor="@android:color/black"
+
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_10sdp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recentOrdersHeading"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="TODAY'S TRIP"
+        android:layout_below="@id/totalEarningsLayoutMain"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <include layout="@layout/driver_today_trip_layout_adapter"
+        android:layout_below="@id/recentOrdersHeading"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recentOrdersHeading"
+        android:id="@+id/recentOrdersRecyclerView"
+        />
+
+    <Button
+        android:id="@+id/cashoutDriverTodayBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_corner_perple"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="CASH OUT"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12sdp"
+        />
+
+
+</RelativeLayout>

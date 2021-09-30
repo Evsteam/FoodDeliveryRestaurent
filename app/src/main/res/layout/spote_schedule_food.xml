@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/dateTimeLayout"
+        android:background="@color/grey_light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today, Feb 28"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:id="@+id/tv_dateTime"/>
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_calander_event"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imgCalender"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/dateTimeLayout"
+        tools:listitem="@layout/spot_schidule_item"
+        android:layout_above="@+id/updateScheduleBtn"/>
+
+
+
+        <Button
+            android:id="@+id/updateScheduleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE SCHEDULE"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:background="@color/appCodeColor"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+    <TextView
+        android:id="@+id/notfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/d_din_font"
+        android:text="Booking Not \nCompeted"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

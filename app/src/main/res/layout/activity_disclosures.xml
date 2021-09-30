@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarDisclosure"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarDisclosure"
+        android:layout_above="@+id/tv_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_25sdp">
+            <TextView
+                android:id="@+id/tv_discoul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/d_din_font"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="@dimen/_15sdp"
+                android:padding="20dp"/>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureOneLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+
+<!--                android:orientation="horizontal"-->
+
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="@dimen/_3sdp"-->
+<!--                    android:padding="@dimen/_3sdp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureOneTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:lineSpacingExtra="@dimen/_4sdp"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="No refunds or exchanges once driver assigned."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureTwoLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureOneLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="@dimen/_3sdp"-->
+<!--                    android:padding="@dimen/_3sdp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureTwoTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:lineSpacingExtra="@dimen/_4sdp"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="Socials end after time and are done in public only."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureThreeLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureTwoLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureThreeTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:lineSpacingExtra="@dimen/_4sdp"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="Dinner and/or tickets are paid in full by customer."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureFourLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureThreeLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureFourTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="Customer must me 18 or older."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureFiveLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureFourLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureFiveTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="No pickups or drop offs."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureSixLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureFiveLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureSixTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:lineSpacingExtra="@dimen/_4sdp"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="Customer meets Plus Driver in Public in Socials."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureSevenLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureSixLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureSevenTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="Must set up Spots Available."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureEightLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureSevenLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureEightTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:lineSpacingExtra="@dimen/_4sdp"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text="No guarantees this works for both parties on scheduling."-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/disclosureTenLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/disclosureEightLayout"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    android:layout_marginLeft="3dp"-->
+<!--                    android:padding="3dp"-->
+<!--                    android:src="@drawable/star_blue" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclosureTenTxt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:backgroundTint="@android:color/black"-->
+<!--                    android:fontFamily="@font/d_din_font"-->
+<!--                    android:hint="Can reschedule if we cannot find a plus driver. We will not refund any purchase. We will find another time to do it."-->
+<!--                    android:lineSpacingExtra="@dimen/_4sdp"-->
+<!--                    android:paddingLeft="@dimen/_7sdp"-->
+<!--                    android:paddingRight="@dimen/_7sdp"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:textColorHint="@android:color/black"-->
+<!--                    android:textCursorDrawable="@null"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:typeface="sans" />-->
+<!--            </LinearLayout>-->
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:fontFamily="@font/d_din_font_bold"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="@dimen/_4sdp"
+        android:text="NO REFUND OR EXCHANGES.\nSALES ARE FINAL"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:layout_above="@+id/acceptDisclosureLayout"/>
+    <RelativeLayout
+        android:id="@+id/acceptDisclosureLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:background="@color/green">
+
+
+
+        <CheckBox
+            android:id="@+id/cb_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/check_button"
+            android:checked="false"
+            android:padding="10dp"
+           android:layout_centerHorizontal="true"
+            android:text="@string/accept_continue"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

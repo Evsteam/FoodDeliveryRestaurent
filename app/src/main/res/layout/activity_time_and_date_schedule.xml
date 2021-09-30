@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarDateTimeSchedule"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/confirmPaymentDateTimeSchedule"
+        android:layout_below="@id/toolbarDateTimeSchedule">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/confirmPaymentDateTimeSchedule"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/calendarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@android:color/darker_gray"
+                android:orientation="vertical" />
+
+            <!--<CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbarDateTimeSchedule"
+                android:id="@+id/calendarLayout"
+                />-->
+
+            <RelativeLayout
+                android:id="@+id/selectionTimeDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calendarLayout"
+                android:background="@color/appCodeColor"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/selectTimeHourlyTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Time Hourly rate-"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/selectTimeHourlyAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/selectTimeHourlyTxt"
+                    android:text="$50.00"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectionTimeDateLayout"
+                android:layout_margin="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:id="@+id/mainTimeScheduleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/scheduleStartTimeLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_bg_edittextall"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/startTimeTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/icon"
+                            android:layout_weight="1.5"
+                            android:background="@color/grey_light"
+                            android:padding="@dimen/_5sdp"
+                            android:text=""
+                            android:hint="Start Time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/icon"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.5"
+                            app:srcCompat="@drawable/watch_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/scheduleEndTimeLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/selectionTimeDateLayout"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_bg_edittextall"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/endTimeTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/icon"
+                            android:layout_weight="1.5"
+                            android:background="@color/grey_light"
+                            android:padding="@dimen/_5sdp"
+                            android:text=""
+                            android:hint="End Time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/icon2"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.5"
+                            app:srcCompat="@drawable/watch_gray" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/leaveATipTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainTimeScheduleLayout"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/d_din_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="LEAVE A TIP"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/tipCountLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leaveATipTxt"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/tip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <RadioButton
+                            android:id="@+id/rb_five"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_backgeound"
+                            android:button="@color/transparent"
+                            android:fontFamily="@font/d_din_font"
+                            android:gravity="center"
+                            android:text="$5"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_ten"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_backgeound"
+                            android:button="@color/transparent"
+                            android:gravity="center"
+                            android:text="$10"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_fifteen"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_backgeound"
+                            android:button="@color/transparent"
+                            android:fontFamily="@font/d_din_font"
+                            android:gravity="center"
+                            android:text="$15"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_twenty"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_backgeound"
+                            android:button="@color/transparent"
+                            android:fontFamily="@font/d_din_font"
+                            android:gravity="center"
+                            android:text="$20"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_other"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_backgeound"
+                            android:button="@color/transparent"
+                            android:fontFamily="@font/d_din_font"
+                            android:gravity="center"
+                            android:text="Other"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/other_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/etxt_bg"
+                        android:fontFamily="@font/d_din_font"
+                        android:hint="Enter Tip"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_13sdp"
+                        android:typeface="sans"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/transation_layout"
+                    android:layout_below="@+id/tipCountLayout"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/black"
+                        android:fontFamily="@font/d_din_font"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Transaction fee"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/tv_transactionfee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/black"
+                        android:fontFamily="@font/d_din_font"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="$5.8%"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_14sdp"
+                        android:typeface="sans" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/transation_devider"
+                    android:layout_below="@+id/transation_layout"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/totalProductsInCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transation_devider"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                            android:id="@+id/payableAmountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/black"
+                        android:fontFamily="@font/d_din_font"
+                        android:maxLines="1"
+                        android:layout_toStartOf="@+id/totalPayableAmountService"
+                        android:paddingBottom="10dp"
+                        android:text="Total Payable Amount: "
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/totalPayableAmountService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/black"
+                        android:fontFamily="@font/d_din_font"
+                        android:maxLines="1"
+                        android:text=""
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalProductsInCart"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_25sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text="ANY SPECIAL NOTES"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:background="@drawable/etxt_bg"
+                        android:gravity="top"
+                        android:hint=""
+                        android:id="@+id/et_notes"
+                        android:padding="@dimen/_5sdp" />
+                    <LinearLayout
+                        android:id="@+id/userAddressLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/etxt_bg"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+
+                        <EditText
+                            android:id="@+id/userAddressEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/black"
+                            android:hint="Address"
+                            android:fontFamily="@font/d_din_font"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:padding="@dimen/_5sdp"
+                            android:text=""
+                            android:focusable="false"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_14sdp"
+                            android:typeface="sans" />
+                        <ImageView
+                            android:id="@+id/gettingLocation"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/gps" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/confirmPaymentDateTimeSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:text="CONFIRM"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+
+        />
+
+</RelativeLayout>

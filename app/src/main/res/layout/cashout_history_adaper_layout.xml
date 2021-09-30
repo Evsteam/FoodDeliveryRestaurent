@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/main_layout">
+
+    <TextView
+        android:id="@+id/tv_dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/d_din_font"
+        android:text="March 10th 2020"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:layout_toStartOf="@+id/btn_status"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/tv_totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dateTime"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/d_din_font"
+        android:text="Amount - $200"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btn_status"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/back_green_dark"
+        android:fontFamily="@font/d_din_font"
+        android:text="Paid"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:id="@+id/btn_status"/>
+
+</RelativeLayout>

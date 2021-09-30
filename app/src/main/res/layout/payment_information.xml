@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/paymentInformationHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/d_din_font"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5sdp"
+        android:text="Payment Information"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/paymentTypeRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/paymentInformationHeading"
+        android:background="@drawable/etxt_bg">
+
+
+        <LinearLayout
+            android:id="@+id/cardTypePaymentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_margin="@dimen/_3sdp"
+                android:src="@drawable/card_icon" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/d_din_font"
+                android:hint="CREDIT CARD"
+                android:id="@+id/tv_Type"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_16sdp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewPaymentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/cardTypePaymentInfo"
+            android:background="@color/grey_light" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewPaymentInfo"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/img_user"
+                android:fontFamily="@font/d_din_font"
+                android:maxLines="1"
+                android:text=""
+
+                android:id="@+id/tv_cardNumber"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_16sdp" />
+
+            <ImageView
+
+                android:id="@+id/img_user"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingStart="@dimen/_3sdp"
+                android:src="@drawable/user" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/paymentInformationHeading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentTypeRelativeLayout"
+        android:fontFamily="@font/d_din_font"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5sdp"
+        android:text="Payment Details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/paymentTypeRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentInformationHeading2"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:text="TIP AMOUNT"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:id="@+id/tv_tipAmount"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/StateTax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentTypeRelativeLayout2"
+        android:background="@drawable/etxt_bg"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:text="State Tax"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:id="@+id/tv_sateTax"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/delivery_charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/StateTax"
+        android:background="@drawable/etxt_bg"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:text="Delivery Charge"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:text="$ 6 "
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/trasaction_charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delivery_charge"
+        android:background="@drawable/etxt_bg"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:text="Transaction Fee"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:text="$ 6 "
+            android:id="@+id/tv_transactionfee"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/paymentInformationHeading3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trasaction_charge"
+        android:fontFamily="@font/d_din_font"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5sdp"
+        android:text="Total Amount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentInformationHeading3"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/layout_totalAmount">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:id="@+id/amountTitle"
+            android:text="TOTAL AMOUNT"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:fontFamily="@font/d_din_font"
+            android:maxLines="1"
+            android:id="@+id/tv_totalAmount"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/_16sdp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_payment"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:text="@string/confirm_pay"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layout_totalAmount"
+        android:fontFamily="@font/d_din_font"
+        android:textStyle="bold" />
+
+</RelativeLayout>

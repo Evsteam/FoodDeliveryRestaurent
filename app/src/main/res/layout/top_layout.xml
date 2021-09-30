@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_details"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_margin="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/btn_corner_white">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/darkOrange"
+                            android:padding="@dimen/_10sdp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Heirloom Cafe"
+                                    android:fontFamily="@font/d_din_font"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/tv_title"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$10.99"
+                                    android:layout_alignParentRight="true"
+                                    android:fontFamily="@font/d_din_font"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/tv_price"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:background="@color/white"
+                            >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address:"
+                                    android:fontFamily="@font/d_din_font"
+
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textColor="@color/black"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="321 Main Street Aloma, CA-94507"
+                                    android:fontFamily="@font/d_din_font"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tv_address"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/d_din_font"
+                                    android:text="Landmark will goes here"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:id="@+id/tv_landMark"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/d_din_font"
+                                    android:text=""
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:id="@+id/tv_specialNotess"/>
+
+
+                        </LinearLayout>
+                        <fragment
+                            android:id="@+id/map_jobDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>

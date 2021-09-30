@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.evs.foodexp">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+
+    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_1024"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_1024"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name="com.evs.foodexp.userPkg.activity.PaymentToGetActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.TrackOrderActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.PaymentUserActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.TermsAndConditionActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.PrivacyPolicyActivity" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.CashoutHistoryDriverActivity" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.DriverJobToGetDetailActivity" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.ServiceJobDetailActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.CouponCodeActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.ToGetAmountActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.ToGetActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.ToGetDisclouserActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.ToGetConfirmActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.ServiceConfirmActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.TimeAndDateScheduleActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.DisclosuresActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.ServiceFragment" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.OrderPlacedActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.PaymentActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.UserAddressActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.CartActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.RestaurantMenuActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.FoodAnotherOptionActivity" />
+        <activity android:name="com.evs.foodexp.restaurentPkg.activity.CashoutActivity" />
+        <activity android:name="com.evs.foodexp.restaurentPkg.activity.OrderPickedConfirmActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.Getstart" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.DriverHomeActivity" />
+
+        <activity
+            android:name="com.evs.foodexp.restaurentPkg.activity.RestaurentHomeActivity"
+            android:label="@string/title_activity_restaurent_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.evs.foodexp.userPkg.activity.UserHomeActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.fragment.HelpFragment" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.ForgotPasswordActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.fragment.ChangePasswordFragment" />
+        <activity android:name="com.evs.foodexp.restaurentPkg.activity.AddMenuListActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.PaymentInfoActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.CompleteProfileActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.SignUpActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.LoginActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.WelcomeActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.evs.foodexp.userPkg.activity.CategoryMenuMenuActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.SpecialAddressActivity" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.PaymentSpecialOrder" />
+
+        <activity
+            android:name="com.evs.foodexp.commonPkg.common.activity.AddYourLoaction"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name="com.evs.foodexp.driverPkg.activity.DriverCashoutHistoryActivity" />
+        <activity android:name="com.evs.foodexp.commonPkg.common.activity.EditCompleteProfileActivity" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.CompleteProfileDriverActivity" />
+        <activity android:name="com.evs.foodexp.restaurentPkg.activity.RestCategoryMenuMenuActivity" />
+        <activity android:name="com.evs.foodexp.restaurentPkg.fragment.OrderDetail" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.EditCompleteProfileDriverActivity" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.DriverFoodInProgressActivity" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.DriverJobDetailFoodOrder" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.MultipleMap" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.SpecialDetailsScreen" />
+        <activity android:name="com.evs.foodexp.userPkg.activity.MorePayment" />
+        <activity android:name="com.evs.foodexp.driverPkg.activity.DriverCompletaddress" />
+        <activity android:name=".userPkg.activity.BookingSuceess" />
+        <activity android:name=".commonPkg.common.activity.TrackInProgress" />
+        <activity android:name=".commonPkg.common.activity.TrackOrder1" />
+        <activity android:name=".commonPkg.common.activity.ImageViewer" />
+        <activity android:name=".commonPkg.common.activity.StipeAccounteWeb" />
+
+        <service android:name="com.evs.foodexp.utils.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+<!--        <service-->
+<!--            android:name="com.evs.foodexp.location_services.LocationJobService"-->
+<!--            android:permission="android.permission.BIND_JOB_SERVICE"-->
+<!--            android:exported="true"/>-->
+<!--        <service-->
+<!--            android:name="com.evs.foodexp.location_services.UploadLocationService"-->
+<!--            android:exported="true"/>-->
+<!--        <service android:name="com.evs.foodexp.commonPkg.common.GPSTracker" />-->
+
+        <receiver android:name=".utils.MyBroadcastreceiver">
+            <intent-filter>
+                <action android:name=".utils.MyBroadcastreceiver" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

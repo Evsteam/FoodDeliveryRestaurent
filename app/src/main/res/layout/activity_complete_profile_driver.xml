@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.evs.foodexp.driverPkg.activity.CompleteProfileDriverActivity">
+
+    <include
+        android:id="@+id/toolbarCompleteProfileDriver"
+        layout="@layout/toolbar_layout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarCompleteProfileDriver"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/addressLayoutCompleteProfileDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/etxt_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/gettingLocation"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/d_din_font"
+                    android:hint="Address"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:focusable="false"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_14sdp"
+                    android:typeface="sans" />
+
+                <ImageView
+                    android:id="@+id/gettingLocation"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/gps" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/countryLayoutCompleteProfileDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressLayoutCompleteProfileDriver"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/etxt_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/d_din_font"
+                    android:hint="Country"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_14sdp"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/countryLayoutCompleteProfileDriver"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/restaurantCoverPhotoDriver"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/doted_outline"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/img_ProfileIcon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/image"
+                        app:riv_corner_radius="@dimen/_5sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_ProfileIcon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/d_din_font"
+                        android:text="Upload Your Profile Picture"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_14sdp" />
+                </RelativeLayout>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    app:riv_corner_radius="@dimen/_5sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/restaurantCoverPhotoDriver"
+                android:layout_marginTop="10dp">
+            <LinearLayout
+                android:id="@+id/uploadRestaurantLogoDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/doted_outline"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_DrivingLicenseIcon"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image"
+                    app:riv_corner_radius="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/d_din_font"
+                    android:text="Upload Driving License Image"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_DrivingLicense"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:riv_corner_radius="@dimen/_5sdp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/uploadRestaurantDocDriver"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadRestaurantLogoDriver"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/doted_outline"
+                android:padding="@dimen/_10sdp">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_DocImageDriver"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pdf_img"
+                    app:riv_corner_radius="@dimen/_5sdp" />
+
+                <TextView
+                    android:id="@+id/tv_docs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_DocImageDriver"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/d_din_font"
+                    android:text="Must be able to electronically sign"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_14sdp" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/saveProfileBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadRestaurantDocDriver"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_corner_perple"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="Save &amp; Continue"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

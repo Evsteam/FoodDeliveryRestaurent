@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">Express Plus</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok">OK</string>
+    <string name="welcometext">Patient- Reported Outcomes\nin <font color='red'>PD PRO-</font><font color='red'>PD</font></string>
+    <string name="copyright">\@ 2020 CHORETHING LLC.</string>
+    <string name="reserved">ALL RIGHT RESERVED.</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="validationErrors">Validation Errors</string>
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="managechore">Manage Chore</string>
+    <string name="chorehistory">Chore History</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="earnings">Earnings</string>
+    <string name="manage_menu">Manage Menu</string>
+    <string name="orders">Orders</string>
+    <string name="order_history">Order History</string>
+    <string name="total_earnings">Total Earnings</string>
+    <string name="reviews">Reviews</string>
+    <string name="cashouts">Cashouts</string>
+    <string name="job_histoy">Job History</string>
+    <string name="booking_history">Logout</string>
+    <string name="reviews_rating">Reviews &amp; Rating</string>
+    <string name="edit_businessInfo">Edit Business Info.</string>
+    <string name="upload_document"> Upload Document</string>
+    <string name="banck_accountinfo"> Bank Account Information</string>
+    <string name="change_password">Change Password</string>
+    <string name="help">Help</string>
+    <string name="logout">Signout</string>
+    <string name="saveandcontinue">Save &amp; Continue </string>
+    <string name="accept_continue">Accept &amp; Continue</string>
+    <string name="lawn_garden">Lawn Mow &amp; Garden</string>
+    <string name="search_for_bossiness_category">Enter the ChoreThing Service Address</string>
+    <string name="selectservice">Setect Service Address Type</string>
+
+    <string name="confirm_chore">CONFIRM CHORE DTAE &amp; Time</string>
+    <string name="confirm_pay">CONFIRM &amp; PAY</string>
+    <string name="default_notification_channel_id">FoodExp_notifications</string>
+
+    <string name="pass_text">Please Allow up to one week for backend \n verification.</string>
+    <string name="pass_text1">Please upload all required documentation.</string>
+    <string name="pass_text2">Your data will not be processed until all \n documentation is uploaded .</string>
+    <string name="pass_text3">Please contact ChoreThing customer services\n you have questions.</string>
+    <string name="in_progress">IN PROGRESS</string>
+    <string name="delivered">DELIVERED</string>
+    <string name="today">Today</string>
+    <string name="weekly">Weekly</string>
+    <string name="myChore">My Chore</string>
+    <string name="service">Services</string>
+    <string name="itemDetail">ITEM DETAILS</string>
+    <string name="deliveryDetail">DELIVERY DETAILS</string>
+    <string name="foodDelivery">Food Delivery</string>
+    <string name="ToGet">To Get</string>
+    <string name="sheduleChore">Schedule Chore</string>
+    <string name="location_key" translatable="false">AIzaSyDEYP9nenPV-zJjlCSbPuyf9eYSOfBdKlk</string>
+    <string name="successfully_msg">Please find the chore partner\ninformation below</string>
+    <string name="successfully_order">There are many variations of passages of Lorem Iqsum available, but the majority have suffered alteration in some form, by injected humor, or randomside words which don\'t look even slightly</string>
+    <string name="forgotMsg">Please enter your email address and you will receive a new password via a email</string>
+    <string name="title_activity_restaurent_home">RestaurentHomeActivity</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="toget">To get</string>
+    <string name="cancle">Cancel</string>
+    <string name="fooearnings">Food Order Earning</string>
+    <string name="servceearnings">Service Earning</string>
+    <string name="togetearnings">To Get Earning</string>
+    <string name="messages">Message</string>
+    <string name="submit">Submit</string>
+    <string name="bagPurchase">Bag Purchase</string>
+    <string name="w_nine">W-9 Form</string>
+    <string name="speOrder">Special Order</string>
+    <string name="speOrderEr">Special Order Earning</string>
+    <string name="confrimPyament">Confirm &amp; Payment</string>
+    <string name="DashTitile">&#8220; 50% of all net profits feed and support starving children &#8221;</string>
+
+    <string-array name="AccountType">
+        <item>AccountType</item>
+        <item>Saving</item>
+        <item>Current</item>
+    </string-array>
+
+    <string-array name="RestorentType">
+        <item>Select Restaurant Type</item>
+        <item>None</item>
+        <item>Veg</item>
+        <item>Non-veg</item>
+    </string-array>
+    <string-array name="foodType">
+        <item>Select Food Type</item>
+        <item>Veg</item>
+        <item>Non-veg</item>
+    </string-array>
+
+</resources>

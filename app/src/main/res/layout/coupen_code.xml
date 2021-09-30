@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include
+        android:id="@+id/toolbarCartCouponCode"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/couponCodeLayout"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/couponCode"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1.2"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back_bg_edittextall"
+                android:hint="Coupon Code"
+                android:fontFamily="@font/d_din_font"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_14sdp"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/applyCouponCodeBtn"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_bg_orange"
+                android:gravity="center"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/d_din_bold"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="LEAVE A TIP"
+            android:id="@+id/leaveATipTxt"
+            android:layout_below="@id/couponCodeLayout"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/leaveATipTxt"
+            android:id="@+id/tipCountLayout">
+
+            <RadioGroup
+                android:id="@+id/tip_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RadioButton
+                    android:id="@+id/rb_five"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_backgeound"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/d_din_font"
+                    android:gravity="center"
+                    android:text="$5"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_ten"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_backgeound"
+                    android:button="@color/transparent"
+                    android:gravity="center"
+                    android:text="$10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_fifteen"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_backgeound"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/d_din_font"
+                    android:gravity="center"
+                    android:text="$15"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_twenty"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_backgeound"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/d_din_font"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="$20"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_other"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_backgeound"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/d_din_font"
+                    android:gravity="center"
+                    android:text="Other"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/other_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/d_din_font"
+                android:hint="Enter Tip"
+                android:background="@drawable/etxt_bg"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/grey_light"/>
+
+        <include
+            layout="@layout/list_item"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/listView"
+            tools:listitem="@layout/list_item" />
+
+
+
+
+
+    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PLACE ORDER"
+        android:id="@+id/placeOrderByCouponCodeBtn"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appCodeColor"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

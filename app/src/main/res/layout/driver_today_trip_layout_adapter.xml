@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_7sdp"
+            android:id="@+id/relativeLayoutInProgressOrder"
+            >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/clientImage"
+                app:riv_corner_radius="@dimen/_50sdp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/clientImage"
+                android:text="Donnie McClurkin-"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:id="@+id/clientNameInProgressOrder"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/clientImage"
+                android:text="5:35 pm"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@id/clientNameInProgressOrder"
+                android:id="@+id/pizzaInProgressOrder"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/clientNameInProgressOrder"
+                android:text="321 Main Street California"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/black"
+                android:id="@+id/sandwitchInProgress"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.6 km"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:layout_alignParentRight="true"
+
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarWelcome"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarWelcome"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10sdp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/welcomeImgs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/foodWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:scaleType="fitXY"
+                android:src="@drawable/back_back"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/serviceWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_below="@id/foodWelcome"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/service"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:id="@+id/toGetWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/serviceWelcome"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:src="@drawable/to_get"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textOneWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/d_din_font_bold"
+                    android:gravity="center_horizontal"
+                    android:text="50% Feed the Children 50%"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textTwoWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textOneWelcome"
+                    android:fontFamily="@font/d_din_font"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Hello, Welcome to Our Diverse App!"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp" />
+
+
+                <Button
+                    android:id="@+id/customerWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@drawable/button_corner_perple"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:text="Customer"
+                    android:fontFamily="@font/d_din_font"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+
+                    />
+
+
+                <Button
+                    android:id="@+id/plusDriverWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@drawable/button_corner_perple"
+                    android:fontFamily="@font/d_din_font"
+                    android:text="Plus Driver"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/restaurentWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@drawable/button_corner_perple"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:text="Restaurant"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

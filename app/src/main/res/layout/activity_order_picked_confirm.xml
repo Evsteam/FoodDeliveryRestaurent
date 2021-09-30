@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/toolbarOrderPicked"
+        layout="@layout/toolbar_layout" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/check_new"
+        android:layout_below="@id/toolbarOrderPicked"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/checkOrderPicked"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:fontFamily="@font/d_din_bold"
+        android:layout_marginBottom="10dp"
+        android:text="Pickup Request Confirm!"
+        android:id="@+id/requestConfirmMsg"
+        android:layout_below="@id/checkOrderPicked"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/etxt_bg_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/orderPickedConfirmRelativeLayout1"
+        android:layout_below="@id/requestConfirmMsg"
+        android:padding="5dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Request Date/Time:"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Today|11:54 AM"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/etxt_bg_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:id="@+id/orderPickedConfirmRelativeLayout2"
+        android:layout_below="@id/orderPickedConfirmRelativeLayout1"
+        android:padding="5dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Distance:"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="1.6 Miles"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/etxt_bg_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:id="@+id/orderPickedConfirmRelativeLayout3"
+        android:layout_below="@id/orderPickedConfirmRelativeLayout2"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/driverImageOrderPicked"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:src="@drawable/user" />
+        <TextView
+            android:id="@+id/driverNameOrderPicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/driverImageOrderPicked"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Steve John"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/CustomRatingBarGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/drivierRatingInNumbers"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/drivierRatingInNumbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="4.8"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/orderPickedConfirmRelativeLayout3"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_orange"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/callImageToDriver"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:src="@drawable/phone" />
+
+            <TextView
+                android:id="@+id/callDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="CALL DRIVER"
+                android:textColor="@android:color/white"
+
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buton_bg_red"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:src="@drawable/cancel_request" />
+
+            <TextView
+                android:id="@+id/edttxt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="CANCEL REQUEST"
+                android:textColor="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appCodeColor"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:text="CONFIRMED FOOD PICKUP"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/breakfastBtn"
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/button_corner_perple"
+        android:textColor="@color/grey_light"
+        android:fontFamily="@font/d_din_font"
+        android:text="Breakfast"
+        android:gravity="center_vertical"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_11sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        />
+
+    <Button
+        android:id="@+id/quickByteBtn"
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/button_corner_perple"
+        android:textColor="@color/grey_light"
+        android:fontFamily="@font/d_din_font"
+        android:text="Quick Bites"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_11sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        />
+
+    <Button
+        android:id="@+id/desertBtn"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/button_corner_perple"
+        android:textColor="@color/grey_light"
+        android:fontFamily="@font/d_din_font"
+        android:text="Desert"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_11sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        />
+
+</RelativeLayout>

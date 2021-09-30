@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/toolbarRestaurantMenu"
+        layout="@layout/toolbar_layout" />
+
+
+
+
+    <include layout="@layout/restaurant_menu_type_btn_adapter"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_15sdp"
+        android:id="@+id/menuTypeButtons"
+        android:layout_below="@id/toolbarRestaurantMenu"
+        />
+    <!--<include layout="@layout/restaurant_menu_list_adapter"
+        android:id="@+id/foodSelectionView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_below="@id/menuTypeButtons"
+        />-->
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRestaurantMenu"
+        android:id="@+id/specialRestaurantMenuHorizontal"
+        />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menuTypeButtons"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/menuTypeRestaurantBtnRecycle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/normalRestaurantMenuVertical" />
+
+    <GridView
+    android:id="@+id/grid_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:columnWidth="100dp"
+    android:drawSelectorOnTop="true"
+    android:gravity="center"
+    android:numColumns="2"
+    android:stretchMode="columnWidth"
+    android:layout_below="@id/menuTypeRestaurantBtnRecycle"
+    android:verticalSpacing="5dp"
+    android:horizontalSpacing="5dp"
+    android:focusable="true"
+    android:clickable="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_notFound"
+        android:text="food\nnot Found"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

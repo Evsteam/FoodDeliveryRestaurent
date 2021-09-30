@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/toolbarTrackOrderCallDriver"
+        layout="@layout/toolbar_layout" />
+
+    <fragment
+        android:id="@+id/mapLocation"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarTrackOrderCallDriver"
+        android:layout_above="@+id/timingScheduleTrackingCallDriver"/>
+
+    <include layout="@layout/order_pickup_timing_schedule"
+       android:id="@+id/timingScheduleTrackingCallDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/waitingOrderBtn"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/waitingOrderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/back_green"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:paddingTop="@dimen/_3sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/phone"
+            android:layout_gravity="center_vertical"
+            />
+
+        <Button
+
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:fontFamily="@font/d_din_font"
+            android:textAllCaps="false"
+            android:text="Call Driver"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:textSize="@dimen/_15sdp"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

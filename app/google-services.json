@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "27735899901",
+    "firebase_url": "https://foodexp-7be4f.firebaseio.com",
+    "project_id": "foodexp-7be4f",
+    "storage_bucket": "foodexp-7be4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27735899901:android:f2272d94ac56e336bd0894",
+        "android_client_info": {
+          "package_name": "com.evs.foodexp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27735899901-4u3l9d9758e1sumqch6534a1k4giqf13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evs.foodexp",
+            "certificate_hash": "2f8b3468ba3ad44afeba726e85c56499eddd6aee"
+          }
+        },
+        {
+          "client_id": "27735899901-jiefga7kq90kv0i00696sr7775nch7kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALX7Hdpa0SPsqGSmI4RNIPO2CaBkFdRYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27735899901-jiefga7kq90kv0i00696sr7775nch7kp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

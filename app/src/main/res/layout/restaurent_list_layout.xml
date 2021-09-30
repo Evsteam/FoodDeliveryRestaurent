@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <!--<include
+        android:id="@+id/toolbarRestaurantList"
+        layout="@layout/toolbar_layout" />-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/searchLayout"
+
+        android:background="@color/appCodeColor"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            card_view:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:elevation="0dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            app:cardCornerRadius="5dp">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/d_din_font"
+        android:padding="10dp"
+        android:hint="Pizza, Burger, Sandwitch"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/img_serach"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/img_serach"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/search_gray"/>
+</RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!--<include layout="@layout/restaurant_list_adapter"
+        android:layout_below="@id/searchLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/listRestaurantForUser"
+        />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchLayout"
+        android:text="50% of all net profits feed and support starving children"
+        android:fontFamily="@font/d_din_font_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/tv_title"
+        android:gravity="center_horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:id="@+id/foodListRecycle"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:fontFamily="@font/d_din_font"
+        android:id="@+id/tv_noFound"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

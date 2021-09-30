@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/manageMenuList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/restaurant_menu_list_item"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Added\nnot Yet"
+        android:textAlignment="center"
+        android:fontFamily="@font/d_din_font"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/tv_noDataFound"/>
+
+
+</RelativeLayout>

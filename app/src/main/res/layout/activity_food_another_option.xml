@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<!--    <include-->
+<!--        android:id="@+id/toolbarFoodAnotherOption"-->
+<!--        layout="@layout/toolbar_layout" />-->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="where and it must be in the city you live"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_below="@id/toGetWelcome"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What do you want and where and it must be in the city you live?"
+        android:textColor="@color/black"
+        android:id="@+id/skipItemMenu"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toGetWelcome"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/et_wtDoWant"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:gravity="top"
+            android:inputType="textPersonName"
+            android:maxLines="20"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toGetWelcome"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:hint="Enter Price"
+            android:gravity="top"
+            android:inputType="numberDecimal"
+            android:maxLines="20"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toGetWelcome"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/et_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:hint="Enter tip amount"
+            android:gravity="top"
+            android:inputType="number"
+            android:maxLines="20"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Fees"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/toGetWelcome"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/et_delaverFees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:gravity="top"
+            android:inputType="text"
+            android:maxLines="20"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="$ 6"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction Fees"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toGetWelcome"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/etxt_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/et_transactionFees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:gravity="top"
+            android:inputType="text"
+            android:maxLines="20"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="5.8% plus .60 cents"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_bg_orange"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_totalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:maxLines="20"
+            android:padding="10dp"
+            android:text="Total Amount: $0.00"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/submitRequestForFoodBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Request"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appCodeColor"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.evs.foodexp.userPkg.activity.CartActivity">
+
+    <include
+        android:id="@+id/toolbarCartMenu"
+        layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_light"
+        android:gravity="center_vertical"
+        android:id="@+id/totalProductsInCart"
+        android:layout_below="@id/toolbarCartMenu">
+
+        <TextView
+            android:id="@+id/currentEarningCashOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="PRODUCTS"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tv_totalProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:textColor="@color/darkOrange"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalProductsInCart"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_above="@id/viewCart"
+        >
+
+        <include layout="@layout/cart_menu_list_adapter"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView" />
+    </RelativeLayout>
+
+<View
+    android:id="@+id/viewCart"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/grey_light"
+    android:layout_above="@id/specialNotes"
+    android:layout_marginBottom="@dimen/_5sdp"
+    />
+
+    <include
+        android:id="@+id/specialNotes"
+        layout="@layout/special_notes_for_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/placeOrderFromCartBtn"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginBottom="13dp"
+        />
+
+    <include layout="@layout/list_coupon_code_payment"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_above="@id/placeOrderFromCartBtn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PLACE ORDER"
+        android:id="@+id/placeOrderFromCartBtn"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appCodeColor"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>

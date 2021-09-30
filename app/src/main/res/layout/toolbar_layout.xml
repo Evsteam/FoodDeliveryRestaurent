@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/abc_action_bar_default_height_material"
+    android:layout_alignParentTop="true"
+    android:background="@color/appCodeColor"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <TextView
+        android:id="@+id/text_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/d_din_font"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_14sdp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:id="@+id/imageToolbar"
+        android:visibility="gone"
+        />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:thumb="@drawable/switch_button"
+        android:checked="false"
+        android:id="@+id/switch_btn"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:theme="@style/MySwitch"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.Toolbar>

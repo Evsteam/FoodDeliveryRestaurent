@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/toolbarOrderConfirmToGet"
+        layout="@layout/toolbar_layout" />
+
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:src="@drawable/check_new"
+        android:layout_below="@id/toolbarOrderConfirmToGet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/checkOrderPickedToGet"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:fontFamily="@font/d_din_bold"
+        android:layout_marginBottom="10dp"
+        android:text="To Get Request Confirmed!"
+        android:id="@+id/requestConfirmMsgToGet"
+        android:layout_below="@id/checkOrderPickedToGet"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:fontFamily="@font/d_din_bold"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:id="@+id/requestConfirmTotalChargeMsgToGet"
+        android:layout_below="@id/requestConfirmMsgToGet"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:fontFamily="@font/d_din_bold"
+        android:layout_marginBottom="10dp"
+        android:text="Please find the vendor Information below"
+        android:id="@+id/requestConfirmVendorInfoMsgToGet"
+        android:layout_below="@id/requestConfirmTotalChargeMsgToGet"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/etxt_bg_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/orderPickedConfirmRelativeLayout1ToGet"
+        android:layout_below="@id/requestConfirmVendorInfoMsgToGet"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/requestDateConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Request Date/Time:"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_12sdp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/bookingDateTimeConfirmedTxtToGet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/requestDateConfirm"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:maxLength="16"
+            android:padding="10dp"
+            android:gravity="right"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_12sdp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/etxt_bg_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:id="@+id/orderPickedConfirmRelativeLayout3ToGet"
+        android:layout_below="@id/orderPickedConfirmRelativeLayout1ToGet"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/driverImageOrderPickedToGet"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:src="@drawable/user" />
+        <TextView
+            android:id="@+id/driverNameOrderPickedToGet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/driverImageOrderPickedToGet"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Steve John"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <RatingBar
+            android:id="@+id/ratingBarToGet"
+            style="@style/CustomRatingBarGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/drivierRatingInNumbersToGet"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/drivierRatingInNumbersToGet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/black"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/d_din_font"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="4.8"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/orderPickedConfirmRelativeLayout3ToGet"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_orange"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/callImageToDriverToGet"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:src="@drawable/phone" />
+
+            <TextView
+                android:id="@+id/callDriverToGet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="CALL DRIVER"
+                android:textColor="@android:color/white"
+
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buton_bg_red"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageViewToGet"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:src="@drawable/cancel_request" />
+
+            <TextView
+                android:id="@+id/edttxt_emailToGet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/black"
+                android:fontFamily="@font/d_din_font"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="CANCEL REQUEST"
+                android:textColor="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/trackRequestBtnToGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appCodeColor"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Track Your Request"
+        />
+
+</RelativeLayout>

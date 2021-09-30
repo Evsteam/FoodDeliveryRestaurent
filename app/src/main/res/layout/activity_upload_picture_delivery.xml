@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.evs.foodexp.driverPkg.activity.UploadImageDeliveryActivity">
+
+    <include
+        android:id="@+id/toolbarDriverUploadImage"
+        layout="@layout/toolbar_layout" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbarDriverUploadImage"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/d_din_font"
+                android:padding="20dp"
+                android:text="Upload the picture of delivery "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <RelativeLayout
+                android:id="@+id/retxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <HorizontalScrollView
+                    android:id="@+id/uploadImageList"
+                    android:layout_width="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none"
+                    android:layout_centerHorizontal="true"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:measureAllChildren="false"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/multipleImage">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/upload_driver_image1"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                             />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/successTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/uploadImageList"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/d_din_font"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Upload here"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp" />
+
+
+                <LinearLayout
+                    android:id="@+id/lll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/successTitle"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_camera"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rateing"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_corner_blue"
+                        android:fontFamily="@font/d_din_font"
+                        android:text="Camera"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_gallery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_orange"
+                        android:fontFamily="@font/d_din_font"
+                        android:text="Gallery"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_uploadImage_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:fontFamily="@font/d_din_font"
+        android:gravity="center"
+        android:text="Done Thank You!"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>

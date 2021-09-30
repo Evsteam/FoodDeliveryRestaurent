@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_details"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food1" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tarceparentApp">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/d_din_font_bold"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/menuTypeButtonsRestaurant"
+        layout="@layout/restaurant_menu_type_btn_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_details"
+        android:layout_margin="@dimen/_10sdp"
+        android:visibility="gone" />
+    <!--<include layout="@layout/restaurant_menu_list_adapter"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/menuTypeButtonsRestaurant"
+        />-->
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/specialRestaurantMenuHorizontal"
+        android:id="@+id/ButtonRestaurantMenuHorizontal"
+        />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/specialRestaurantMenuHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryTypeMenuList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menuTypeButtonsRestaurant" />
+
+    <GridView
+        android:id="@+id/grid_viewRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryTypeMenuList"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Added\nnot Yet"
+        android:textAlignment="center"
+        android:fontFamily="@font/d_din_font"
+        android:textSize="18sp"
+        android:layout_below="@+id/categoryTypeMenuList"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/tv_noDataFound"/>
+
+</RelativeLayout>

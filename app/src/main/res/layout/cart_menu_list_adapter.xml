@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartItemProductImg"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_centerVertical="true">
+
+    <ImageView
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/food"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:id="@+id/cartItemProductImg1"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cartItemProductImg"
+        android:layout_margin="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/productNameCart"
+            android:gravity="center_vertical"
+            >
+
+        <ImageView
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/nonveg"
+            android:id="@+id/cartItemProductType"
+            android:layout_marginTop="@dimen/_4sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sabia Sorbe comida"
+            android:id="@+id/cartProductName"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/light_black"
+            android:fontFamily="@font/d_din_font_bold"
+            android:layout_toRightOf="@id/cartItemProductType"
+            />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/productQtyCart"
+            android:gravity="center_vertical"
+            android:layout_below="@id/productNameCart"
+            android:layout_marginTop="@dimen/_7sdp"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+            android:fontFamily="@font/d_din_font_bold"
+            android:textColor="@color/light_black"
+            android:id="@+id/cartProductQty"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_14sdp" />
+
+            <LinearLayout
+                android:id="@+id/quntity_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cart_strock"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/cartProductQty">
+
+                <ImageView
+                    android:id="@+id/img_minus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:paddingStart="5dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/minus_cart" />
+
+                <TextView
+                    android:id="@+id/tv_quintity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/d_din_font"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green" />
+
+                <ImageView
+                    android:id="@+id/img_plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="5dp"
+                    android:src="@drawable/plus_cart" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/priceFoodCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: $150.00"
+            android:textStyle="bold"
+            android:textColor="@color/appCodeColor"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@id/productQtyCart"
+
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

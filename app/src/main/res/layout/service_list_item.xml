@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House Cleaning Service"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        android:fontFamily="@font/d_din_font"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$200.99"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/caldroid_holo_blue_light"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        android:fontFamily="@font/d_din_font"/>
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderHistoryData"
+        android:layout_margin="10dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/orderHistoryImg"
+            android:src="@drawable/user"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/orderHistoryImg"
+            android:layout_marginLeft="7dp"
+
+            >
+
+            <TextView
+                android:id="@+id/orderHistoryRestaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hairloom Cafe-"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/orderHistoryRestaurantPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$200.99"
+                android:layout_toRightOf="@id/orderHistoryRestaurantName"
+                android:textColor="@color/caldroid_holo_blue_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/orderHistoryRestaurantName"
+                android:src="@drawable/time"
+                android:id="@+id/timeImg"
+                />
+
+            <TextView
+                android:id="@+id/dateTxtOrderHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderHistoryRestaurantName"
+                android:text="March, 15th 2020"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/timeImg"
+                />
+
+            <TextView
+                android:id="@+id/slashOrderHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderHistoryRestaurantName"
+                android:text=" | "
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/dateTxtOrderHistory"
+                />
+
+            <TextView
+                android:id="@+id/timeTxtOrderHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderHistoryRestaurantName"
+                android:text="10:30 am"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/slashOrderHistory"
+                />
+
+            <ImageView
+                android:id="@+id/locationHistoryImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/location"
+                android:layout_below="@id/dateTxtOrderHistory"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8753 Mauricio Walks"
+                android:layout_below="@id/dateTxtOrderHistory"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/locationHistoryImg"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/right_arriw_black"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_light"
+        android:layout_below="@id/orderHistoryData"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderHistoryToGetRecycle"
+        />
+
+</RelativeLayout>

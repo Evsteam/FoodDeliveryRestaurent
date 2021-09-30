@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bestSellerImg1"
+        android:layout_width="80dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bestseller" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/particularFoodLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/restaurentMenuItemImg1Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:elevation="1dp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:id="@+id/restaurentMenuItemImg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:elevation="1dp"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/info_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurentMenuItemImg1Card">
+
+                <ImageView
+                    android:id="@+id/foodType"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/veg" />
+
+                <TextView
+                    android:id="@+id/dishNameRestaurant1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/foodType"
+                    android:fontFamily="@font/d_din_font"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal"
+                    android:layout_toStartOf="@+id/layout_addMenu">
+
+                    <TextView
+                        android:id="@+id/itemOldPrice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/d_din_font"
+                        android:gravity="center"
+                        android:padding="@dimen/_4sdp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/itemSpecialPrice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/d_din_font"
+                        android:gravity="center"
+                        android:padding="@dimen/_4sdp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_addMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/addItemInMenu1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_corner_perple"
+                        android:padding="@dimen/_2sdp"
+                        android:text="  ADD  "
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/quntity_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cart_strock"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_minus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:paddingStart="5dp"
+                            android:paddingRight="5dp"
+                            android:src="@drawable/minus_cart" />
+
+                        <TextView
+                            android:id="@+id/tv_quintity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="0"
+                            android:textColor="@color/green" />
+
+                        <ImageView
+                            android:id="@+id/img_plus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:paddingLeft="5dp"
+                            android:paddingEnd="5dp"
+                            android:src="@drawable/plus_cart" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/action_layout"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="5dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/edit_menu"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/img_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/icon_delete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</RelativeLayout>

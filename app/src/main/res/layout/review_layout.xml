@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <RelativeLayout
+        android:id="@+id/card"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_height="200dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:background="@color/appCodeColor"
+            android:scaleType="center"
+            app:riv_corner_radius="20dip"
+            app:riv_mutate_background="true"
+            android:src="@drawable/business_back"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_bankImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/cash_out_2" />
+
+                <TextView
+                    android:id="@+id/bank_name"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/d_din_font"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Bank of America" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/exp_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Exp 13/19" />
+
+            <TextView
+                android:id="@+id/name"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textSize="18sp"
+                android:fontFamily="@font/d_din_font"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Donnie McClurkin" />
+
+            <TextView
+                android:id="@+id/card_number"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="X X X X   X X X X   X X X X   1 2 3 4 " />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+<!--    <com.github.florent37.arclayout.ArcLayout-->
+<!--        android:id="@+id/arc"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="130dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:arc_cropDirection="cropOutside"-->
+<!--        app:arc_position="top"-->
+<!--        app:arc_height="30dp"-->
+<!--        android:elevation="5dp">-->
+
+
+
+<!--    </com.github.florent37.arclayout.ArcLayout>-->
+
+</RelativeLayout>

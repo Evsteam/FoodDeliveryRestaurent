@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#616161</color>
+    <color name="gray">#808080</color>
+    <color name="grey_light">#D6D6D6</color>
+    <color name="whiteLight">#F3F3F3</color>
+    <color name="appCodeColor">#37235C</color>
+    <color name="tarceparentApp">#AD37235C</color>
+    <color name="appCodeColorLight">#43247E</color>
+    <color name="appCodeColorDim">#725AA1</color>
+    <color name="orange">#FF7E00</color>
+    <color name="darkOrange">#EB4F1C</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparentwhite">#72FFFFFF</color>
+    <color name="yellow">#FDE404</color>
+    <color name="yellowDark">#F9DF04</color>
+    <color name="skyBlue">#26DDE5</color>
+    <color name="green">#00D200</color>
+    <color name="greenDark">#17851F</color>
+    <color name="greenCode">#01CF53</color>
+    <color name="red">#F60505</color>
+    <color name="pink">#FF2B73</color>
+    <color name="google_back">#CF4332</color>
+    <color name="green_radio">#1FED80</color>
+    <color name="primary_trceparent">#7E6200EE</color>
+    <color name="paed">#00DE89</color>
+</resources>
