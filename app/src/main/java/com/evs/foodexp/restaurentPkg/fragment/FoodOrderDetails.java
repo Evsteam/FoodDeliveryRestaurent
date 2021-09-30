@@ -83,7 +83,7 @@ public class FoodOrderDetails extends Fragment implements OnMapReadyCallback,
     String driverId = "", bookingId, items, driverName, delLat, delLongs, dropAddress, amount, pickUplat, pickLong, restName, status = "";
     RelativeLayout layout_rating;
     RatingBar ratingBar;
-    ImageView img_mapSearch;
+    ImageView img_mapSearch,img_mapCoustomer;
     RoundedImageView img_slip,img_complete;
     LinearLayout layoutnotes;
     private static int SELECT_FILE = 11, REQUEST_CAMERA = 12;
@@ -102,6 +102,7 @@ public class FoodOrderDetails extends Fragment implements OnMapReadyCallback,
         tv_restName = view.findViewById(R.id.tv_restName);
         layoutnotes = view.findViewById(R.id.layoutnotes);
         img_mapSearch = view.findViewById(R.id.img_mapSearch);
+        img_mapCoustomer = view.findViewById(R.id.img_mapCoustomer);
         img_slip = view.findViewById(R.id.img_slip);
         img_complete = view.findViewById(R.id.img_complete);
         layout_rating = view.findViewById(R.id.layout_rating);
@@ -249,6 +250,24 @@ public class FoodOrderDetails extends Fragment implements OnMapReadyCallback,
                                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                                 mapIntent.setPackage("com.google.android.apps.maps");
                                 startActivity(mapIntent);
+                            }
+                        });
+                alertbox.show();
+            }
+        });
+
+        img_mapCoustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertbox = new AlertDialog.Builder(getActivity());
+                alertbox.setTitle(getActivity().getResources().getString(R.string.app_name));
+                alertbox.setMessage("Please Google the customer location to deliver the order. ");
+                alertbox.setPositiveButton(getActivity().getResources().getString(R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface arg0, int arg1) {
+                                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                                        Uri.parse("geo:0,0?q="+viewModel.getOrderDetails().getValue().getDeliveryLat()+","+viewModel.getOrderDetails().getValue().getDeliveryLong()+"(" +  viewModel.getOrderDetails().getValue().getUserAddress() + ")"));
+                                startActivity(intent);
                             }
                         });
                 alertbox.show();
